@@ -81,6 +81,7 @@ router.get('/logout', (req, res, next) =>{
   if (req.session) {
     req.session.destroy();
     res.clearCookie('session-id');
+    res.redirect('/');
   }
 });
 
